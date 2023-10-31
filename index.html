@@ -13,16 +13,109 @@
       href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <!-- Link to Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/9ce60122e7.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Movie Watchlist</title>
   </head>
   <body>
     <div class="container">
-      <header class="header bg-image">
-        <h1>Find your film</h1>
-        <p><a href="#">My Watchlist</a></p>
+      <header class="header-wraper bg-image">
+        <h1 class="header-text">Find your film</h1>
+        <a class="watchlist-link" href="#">My Watchlist</a>
       </header>
-      <section></section>
-      <main></main>
+      <section class="search-wraper">
+        <form>
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="search"
+            class="search-text"
+            placeholder="Search for a Movie"
+          />
+        </form>
+
+        <button class="search-btn">Search</button>
+      </section>
+
+      <main class="main-wraper">
+        <article class="article-wraper">
+          <div class="art-img-wraper">
+            <img src="images/poster.png" class="art-img" />
+          </div>
+
+          <div>
+            <div class="film-title-wraper">
+              <h3>Blade Runner 2049</h3>
+              <img src="images/icon.png" class="star-icon" />
+              <h5 class="raiting">8.0</h5>
+            </div>
+            <div class="film-info-wraper">
+              <h5 class="film-info">164 min</h5>
+              <h5 class="film-info">Action, Drama, Mistery</h5>
+              <img src="images/add-icon.png" class="add-icon" />
+              <button class="watchlist-btn">Watchlist</button>
+            </div>
+            <p class="film-description">
+              A blade runner must pursue and terminate four replicants who stole
+              a ship in space, and have returned to Earth to find their creator.
+            </p>
+          </div>
+        </article>
+        <hr />
+
+        <article class="article-wraper">
+          <div class="art-img-wraper">
+            <img src="images/poster.png" class="art-img" />
+          </div>
+
+          <div>
+            <div class="film-title-wraper">
+              <h3>Blade Runner 2049</h3>
+              <img src="images/icon.png" class="star-icon" />
+              <h5 class="raiting">8.0</h5>
+            </div>
+            <div class="film-info-wraper">
+              <h5 class="film-info">164 min</h5>
+              <h5 class="film-info">Action, Drama, Mistery</h5>
+              <img src="images/add-icon.png" class="add-icon" />
+              <button class="watchlist-btn">Watchlist</button>
+            </div>
+            <p class="film-description">
+              A blade runner must pursue and terminate four replicants who stole
+              a ship in space, and have returned to Earth to find their creator.
+            </p>
+          </div>
+        </article>
+        <hr />
+
+        <article class="article-wraper">
+          <div class="art-img-wraper">
+            <img src="images/poster.png" class="art-img" />
+          </div>
+
+          <div>
+            <div class="film-title-wraper">
+              <h3>Blade Runner 2049</h3>
+              <img src="images/icon.png" class="star-icon" />
+              <h5 class="raiting">8.0</h5>
+            </div>
+            <div class="film-info-wraper">
+              <h5 class="film-info">164 min</h5>
+              <h5 class="film-info">Action, Drama, Mistery</h5>
+              <img src="images/add-icon.png" class="add-icon" />
+              <button class="watchlist-btn">Watchlist</button>
+            </div>
+            <p class="film-description">
+              A blade runner must pursue and terminate four replicants who stole
+              a ship in space, and have returned to Earth to find their creator.
+            </p>
+          </div>
+        </article>
+        <hr />
+      </main>
     </div>
     <footer class="attribution">
       Challenge by
