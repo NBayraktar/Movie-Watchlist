@@ -15,7 +15,7 @@ body {
 
 hr {
   color: #e5e7eb;
-  margin-top: 1em;
+  margin-top: 0.8em;
 }
 
 .container {
@@ -30,6 +30,34 @@ hr {
 
 .container::-webkit-scrollbar {
   display: none;
+}
+
+/* Initial state */
+.initial-state-wraper {
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.initial-content-wraper {
+  text-align: center;
+}
+
+.initial-state-icon,
+.initial-state-text {
+  color: #dfdddd;
+}
+
+.initial-state-icon {
+  width: 70px;
+  height: 61.25px;
+}
+
+.initial-state-text {
+  font-size: 1.125rem;
+  line-height: 0.8;
+  letter-spacing: 1px;
 }
 
 .header-wraper,
