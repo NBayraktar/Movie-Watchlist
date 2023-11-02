@@ -13,11 +13,6 @@ body {
   align-items: center;
 }
 
-hr {
-  color: #e5e7eb;
-  margin-top: 0.8em;
-}
-
 .container {
   width: 550px;
   height: 780px;
@@ -155,15 +150,26 @@ hr {
 }
 
 /* Main article */
-.article-wraper {
-  margin-top: 1em;
+.main-wraper {
   display: flex;
+  flex-direction: column;
+}
+
+.border-line {
+  width: 100%;
+  border-top: 1px solid #e5e7eb;
+  margin: 1em 0;
+}
+
+.article-wraper {
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 16px;
 }
 
 .article-wraper:first-of-type {
-  margin-top: 2.5em;
+  margin-top: 85.5em;
 }
 
 .film-title-wraper,
@@ -183,8 +189,9 @@ hr {
 }
 
 .art-img {
-  height: 99px;
+  width: 99px;
   height: 148px;
+  border-radius: 3px;
 }
 
 .star-icon,
