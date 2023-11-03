@@ -1,5 +1,4 @@
 let movieIds = []
-
 const inputSearchEl = document.getElementById('input-search')
 const searchBtnEl = document.getElementById('search-btn')
 const mainEl = document.getElementById('main')
@@ -14,13 +13,23 @@ searchBtnEl.addEventListener('click', async (e) => {
     for (let filmId of data.Search) {
       movieIds.push(filmId.imdbID)
     }
+    renderMovie()
+    inputSearchEl.value = ''
+  } else {
+    inputSearchEl.placeholder = 'Searching something with no data'
+    mainEl.innerHTML = `
+      <section class="initial-content-wraper">
+        <p class="initial-state-text">Unable to find what you’re looking for. Please try another search!
+        </p>
+      </section>
+    `
+    inputSearchEl.value = ''
   }
-  renderMovie()
-  inputSearchEl.value = ''
 })
 
 async function renderMovie() {
   initialContentEl.style.display = 'none'
+  inputSearchEl.placeholder = 'Search for a movie'
   for (movie of movieIds) {
     const response = await fetch(`https://www.omdbapi.com/?apikey=184cd917&i=${movie}&type=movie&plot=short`)
     const data = await response.json()
