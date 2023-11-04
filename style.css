@@ -231,6 +231,21 @@ body {
   line-height: 1.2;
 }
 
+/* Watchlist */
+.watchlist-initial-wraper {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.add-btn-watch {
+  font-weight: 700;
+}
+
+.add-btn-watch:hover {
+  color: rgb(54, 54, 54, 0.7);
+}
+
 /* Footer */
 .attribution {
   font-size: 0.688rem;

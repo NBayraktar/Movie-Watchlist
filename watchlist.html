@@ -24,27 +24,21 @@
   <body>
     <div class="container">
       <header class="header-wraper bg-image">
-        <h1 class="header-text">Find your film</h1>
-        <a class="watchlist-link" href="watchlist.html">My Watchlist</a>
+        <h1 class="header-text">My Watchlist</h1>
+        <a class="watchlist-link" href="index.html">Search for Movies</a>
       </header>
-      <section class="search-wraper">
-        <form>
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <input
-            type="search"
-            class="search-text"
-            id="input-search"
-            placeholder="Search for a Movie"
-          />
-        </form>
-
-        <button class="search-btn" id="search-btn">Search</button>
-      </section>
 
       <main id="main" class="main-wraper initial-state-wraper">
         <section class="initial-content-wraper">
-          <img src="images/initial-state-icon.svg" class="initial-state-icon" />
-          <p class="initial-state-text">Start Exploring</p>
+          <p class="initial-state-text">
+            Your watchlist is looking a little empty...
+          </p>
+          <div class="film-info-wraper watchlist-initial-wraper">
+            <img src="images/add-icon.png" class="add-icon" />
+            <button class="watchlist-btn add-btn-watch">
+              Let's add some movies!
+            </button>
+          </div>
         </section>
       </main>
     </div>
