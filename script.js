@@ -1,8 +1,11 @@
 let movieIds = []
+let dataForLocalStor = []
 const inputSearchEl = document.getElementById('input-search')
 const searchBtnEl = document.getElementById('search-btn')
 const mainEl = document.getElementById('main')
 const initialContentEl = document.querySelector('.initial-content-wraper')
+const watchlistBtnEl = document.getElementById('add-movie-watch-btn')
+
 
 searchBtnEl.addEventListener('click', async (e) => {
   e.preventDefault()
@@ -33,7 +36,6 @@ async function renderMovie() {
   for (movie of movieIds) {
     const response = await fetch(`https://www.omdbapi.com/?apikey=184cd917&i=${movie}&type=movie&plot=short`)
     const data = await response.json()
-    console.log(data);
     mainEl.innerHTML += `
     <article class="article-wraper">
       <div class="art-img-wraper">
@@ -48,7 +50,7 @@ async function renderMovie() {
           <h5 class="film-info">${data.Runtime}</h5>
           <h5 class="film-info">${data.Genre}</h5>
           <img src="images/add-icon.png" class="add-icon"/>
-          <button class="watchlist-btn">Watchlist</button> 
+          <button class="watchlist-btn" data-watchlist="${movie}">Watchlist</button> 
         </div>
         <p class="film-description">${data.Plot}</p>
       </div> 
@@ -56,5 +58,17 @@ async function renderMovie() {
     <hr class="border-line"/>
     `
   }
-
+  inputSearchEl.addEventListener('focus', clearContent)
 }
+
+function clearContent() {
+  location.reload()
+}
+
+document.addEventListener('click', (e) => {
+  if (e.target.dataset.watchlist) {
+    dataForLocalStor.push(e.target.dataset.watchlist)
+    let removeDublicates = [...new Set(dataForLocalStor)]
+    localStorage.setItem("dataForLocalStor", JSON.stringify(removeDublicates))
+  }
+})
